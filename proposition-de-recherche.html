@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Projet de recherche - Réalité augmentée</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen,print">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet" media="screen,print">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper" style="background-color:black;">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="index.html">
+                        Is This Real Life ?
+                    </a>
+                </li>
+                <li>
+                    <a href="proposition-de-recherche.html">Proposition de recherche</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+					   <div style="width:80%;">
+                           <h1>Proposition de recherche</h1>
+                        <h2>Le sujet</h2>
+                        <p>La réalité augmentée est une technologie émergente qui a la capacité de combiner le monde réel, et le virtuel. En effet, grâce à la réalité augmentée, nous pouvons superposer des images virtuelles aux images réelles que nos caméras captent.</p>
+                        <p>Le but de cette recherche est d’étudier cette technologie dans le but de l’utiliser dans un jeu. Pour ce faire nous avons besoin de comprendre le positionnement de la caméra dans un environnement de réalité augmentée et de comprendre le fonctionnement du repérage de marqueur pour faire afficher les éléments 3D dans la capture de caméra. Ensuite, il faudra concevoir un petit jeu, où le but est de guider une balle dans un labyrinthe en utilisant l’inclinaison du marqueur pour faire bouger une boule. Si l’utilisateur incline le marqueur, nous calculerons l’angle d’inclinaison pour changer l’angle de la force gravitationnelle de l’environnement. Ainsi, la boule n’aura qu’à subir les effets de la gravité et bouger vers la direction désirée. En ayant effectué cette recherche, nous saurons comment intégrer la réalité augmentée dans le monde du jeu vidéo.</p>
+                        <p>Les domaines d’applications de la réalité augmentée sont très diversifiés et permettent généralement d’ajouter de l’information à un objet physique ou de la rendre plus simple à comprendre. En voici quelques exemples :</p>
+                        <ul>
+                            <li>En médecine, on pourrait vulgariser le fonctionnement d’organes qui serait autrement complexe.</li>
+                            <li>En art ou en histoire, on pourrait reconstituer des pièces importantes en recréant les parties manquantes par ordinateur.</li>
+                            <li>En publicité, il est possible de recevoir plus d’information sur la marque seulement en filmant le logo.</li>
+                        </ul>
+                        <p>Nous avons des connaissances dans la programmation 3D et jeux vidéo. De plus, nous connaissons les langages de programmation C# et C++, qui nous seront utiles pendant le prototypage.</p>
+                        <h2>L'enjeu</h2>
+                        <p>À la fin de ce projet, nous allons connaître le fonctionnement d’un environnement de réalité augmentée comportant des objets influencés par le déplacement d’un marqueur, ainsi que la rotation d’une caméra virtuelle (ici, la caméra virtuelle signifie la caméra qui se situe dans l’environnement de réalité augmentée).  Cette recherche est importante, car elle est en émergence et que l’on ne fait que commencer à l’explore. Nous nous attendons à trouver un moyen de produire du contenu interactif et intuitif, tout cela en liant le monde réel au monde du jeu vidéo. La réalité augmentée permettra plus tard d’amener des jeux vidéo complexes dans notre monde, comme s’il en faisait partie.</p>
+                        <h2>Les objectifs</h2>
+                        <p>Nos objectifs pour la recherche sont les suivants:</p>
+                        <ul>
+                        	<li>
+                        		Explorer les bases de la réalité augmentée.
+                        		<ul>
+                        			<li>Les rotations de la caméra virtuelle.</li>
+                        			<li>La reconnaissance de marqueur.</li>
+                        		</ul>
+                        	</li>
+                        	<li>Impliquer un moteur physique dans notre prototype de réalité augmentée.</li>
+                        	<li>
+	                        	Avec le moteur physique, réussir à faire bouger une balle dans un environnement 3D.
+	                        	<ul>
+	                        		<li>La balle bougera en conséquence des changements dans l'angle du marqueur.</li>
+	                        		<li>Trouver la meilleure méthode pour arriver à changer l’angle</li>
+	                        	</ul>
+                        	</li>
+                        	<li>
+                        		Pour compléter le prototype, il suffit de créer un labyrinthe dans un environnement 3D.
+                        		<ul>
+                        			<li>On pourra contrôler la balle créée précédemment pour parcourir ledit labyrinthe</li>
+                        		</ul>
+                        	</li>
+                        </ul>
+                        <h2>la méthodologie</h2>
+                        <p>Notre recherche sera menée à l’aide d’un prototype de réalité augmentée. Ce sera un projet Unity3D où l’on guidera une balle dans un labyrinthe à l’aide d’un marqueur que l’on fera pivoter. La balle se déplacera en conséquence de l’angle du pivot du marqueur.</p>
+                        <p>Ce prototype nous permettra dans apprendre d’avantage sur le principe de caméra virtuelle et sur les marqueurs en réalité augmentée. Nous pourrons aussi comprendre comment un marqueur qui n’est pas directement en face de la caméra se fait détecter. C’est en faisant l’exploration pratique de cette technologie que nous allons mieux la comprendre.</p>
+                        <h3>Contraintes</h3>
+                        <p>Notre prototype aura certaines contraintes. Il faudra faire attention à la source de lumière dans la pièce où nous créons le prototype. Celle-ci influencera la détection du marqueur. Il faudra aussi créer des marqueurs faciles à détecter, ce qui facilitera le fonctionnement du prototype.</p>
+                        <h2>Les incertitudes</h2>
+                        <ul>
+                        	<li>
+                        		La taille du marqueur
+                        		<ul>
+                        			<li>Nous savons que la taille du marqueur influence la qualité de la reconnaissance de l'image selon la distance</li>
+                        		</ul>
+                        	</li>
+                        	<li>
+                        		La luminosité de la pièce doit être convenable
+                        		<ul>
+                        			<li>Il faut au moins avoir une bonne lumière sur champ de vision de la caméra</li>
+                        		</ul>
+                        	</li>
+                        	<a href='http://artoolkit.org/documentation/doku.php?id=3_Marker_Training:marker_about'>http://artoolkit.org/documentation/doku.php?id=3_Marker_Training:marker_about</a>
+                        	(Pour les deux points)
+                        </ul>
+                        <h2>Les ressources</h2>
+                        <table border='1'>
+                        	<tr>
+                        		<th>Ressources</th>
+                        		<th>Mots clés associés</th>
+                        	</tr>
+                        	<tr>
+                        		<td>Unity3D</td>
+                        		<td>Engin 3D</td>
+                        	</tr>
+                        	<tr>
+                        		<td>Visual Studio 12</td>
+                        		<td>IDE, script</td>
+                        	</tr>
+                        	<tr>
+                        		<td>Webcaméra</td>
+                        		<td>Capture d'image</td>
+                        	</tr>
+                        	<tr>
+                        		<td>Papier et carton</td>
+                        		<td>Marqueurs</td>
+                        	</tr>
+                        	<tr>
+                        		<td><a href='http://artoolkit.org/documentation/'>http://artoolkit.org/documentation/</a></td>
+                        		<td>Documentation ArToolKit</td>
+                        	</tr>
+                        </table>
+                        <h2>Les limites</h2>
+                        <p>Bien évidemment, notre recherche n’explore pas toutes les possibilités de la réalité augmentée. On n’explorera pas les principes de la réalité augmentée sans marqueurs. Par exemple, nous ne pourrons pas toucher nos modèles et interagir avec nos mains.</p>
+                        <h2>L'échéancier ou la planification</h2>
+                        <table border="1" cellspacing="0" cellpadding="0" width="623">
+    <tbody>
+        <tr>
+            <td width="113" align="center" valign="top">
+                <p>
+                    <strong>Temps prévu</strong>
+                </p>
+            </td>
+            <td width="378" align="center" valign="top">
+                <p>
+                    <strong>Descriptions</strong>
+                </p>
+            </td>
+            <td width="132" align="center" valign="top">
+                <p>
+                    <strong>Responsable</strong>
+                </p>
+            </td>
+        </tr>
+       <tr>
+            <td width="66" valign="top">
+                <p>
+                    4h
+                </p>
+            </td>
+            <td width="425" valign="top">
+                <p align="left">
+                    Proposition de recherche
+                </p>
+            </td>
+            <td width="132" valign="top">
+                <p align="left">
+                    WD et VM
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="66" valign="top">
+                <p>
+                    4h
+                </p>
+            </td>
+            <td width="425" valign="top">
+                <p align="left">
+                    Recherche documentaire sur la réalité augmentée
+                </p>
+            </td>
+            <td width="132" valign="top">
+                <p align="left">
+                    WD et VM
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="66" valign="top">
+                <p>
+                    2h
+                </p>
+            </td>
+            <td width="425" valign="top">
+                <p align="left">
+                    Exploration des configurations optimales de la caméra
+                </p>
+            </td>
+            <td width="132" valign="top">
+                <p align="left">
+                    WD
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="66" valign="top">
+                <p>
+                    3h
+                </p>
+            </td>
+            <td width="425" valign="top">
+                <p align="left">
+                    Exploration des marqueurs
+                </p>
+            </td>
+            <td width="132" valign="top">
+                <p align="left">
+                    VM
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="66" valign="top">
+                <p>
+                    2h
+                </p>
+            </td>
+            <td width="425" valign="top">
+                <p align="left">
+                    Exploration des conditions de luminosité et de l’angle de la caméra réel
+                </p>
+            </td>
+            <td width="132" valign="top">
+                <p align="left">
+                    WD
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="66" valign="top">
+                <p>
+                    4h
+                </p>
+            </td>
+            <td width="425" valign="top">
+                <p align="left">
+                    Expérimentation sur le changement de l’angle de la caméra virtuelle
+                </p>
+            </td>
+            <td width="132" valign="top">
+                <p align="left">
+                    WD et VM
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="66" valign="top">
+                <p>
+                    4h
+                </p>
+            </td>
+            <td width="425" valign="top">
+                <p align="left">
+                    Programmation de la vélocité de la balle quand on bouge le plan
+                </p>
+            </td>
+            <td width="132" valign="top">
+                <p align="left">
+                    WD et VM
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="66" valign="top">
+                <p>
+                    3h
+                </p>
+            </td>
+            <td width="425" valign="top">
+                <p align="left">
+                    Création et optimisation du labyrinthe
+                </p>
+            </td>
+            <td width="132" valign="top">
+                <p align="left">
+                    VM (et WD si on en créer plusieurs)
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="66" valign="top">
+                <p>
+                    2h
+                </p>
+            </td>
+            <td width="425" valign="top">
+                <p align="left">
+                    Expérimenter l’activation et la désactivation du jeu quand on enlève et remet le marqueur devant la caméra
+                </p>
+            </td>
+            <td width="132" valign="top">
+                <p align="left">
+                    WD
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="66" valign="top">
+                <p>
+                    2h
+                </p>
+            </td>
+            <td width="425" valign="top">
+                <p align="left">
+                    Programmation de la base du jeu (fonction de rejouer)
+                </p>
+            </td>
+            <td width="132" valign="top">
+                <p align="left">
+                    WD
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="66" valign="top">
+                <p>
+                    4h
+                </p>
+            </td>
+            <td width="425" valign="top">
+                <p align="left">
+                    Validation du jeu (« Debugging » et correction)
+                </p>
+            </td>
+            <td width="132" valign="top">
+                <p align="left">
+                    WD et VM
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="66" valign="top">
+                <p>
+                    3h
+                </p>
+            </td>
+            <td width="425" valign="top">
+                <p align="left">
+                    Analyse et publication des résultats de nos recherches
+                </p>
+            </td>
+            <td width="132" valign="top">
+                <p align="left">
+                    WD et VM
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="66" valign="top">
+                <p>
+                    5h
+                </p>
+            </td>
+            <td width="425" valign="top">
+                <p align="left">
+                    Présentation
+                </p>
+            </td>
+            <td width="132" valign="top">
+                <p align="left">
+                    WD et VM
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="66" valign="top">
+            </td>		
+            <td width="425" valign="top">
+            </td>
+            <td width="132" valign="top">
+            </td>
+        </tr>
+    </tbody>
+</table>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>
