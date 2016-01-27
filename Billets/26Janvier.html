@@ -66,6 +66,11 @@
                             <img src="../img/ChessBoard.jpg" atl="ChessBoard marker" width="50%" height="50%" />
                             <p>Cette image ressemble étrangement à un jeu d’échecs. Ici, nous utilisons les coins des carrés qui se touchent. L’application, à l’aide de la caméra, essaie de trouver et d’identifier les 35 points. Si c’est possible, le texte sur l’application devient rouge et nous pouvons, capture notre première image.</p>
                             <img src="../img/Calib_ready.jpg" alt="Calibration Ready" />
+                            <p>Si un ou plusieurs des coins ne sont pas détecté par la caméra, tous les coins détectés et le texte seront affichés en vert, ce qui signifie qu’il faut bouger la feuille quadriller jusqu’à ce que tous les coins soient détectés.</p>
+                            <img src="../img/CalibNotReady.jpg" atl="Calibration Not Ready" />
+                            <p>Quand nous comprenons le placement de la feuille quadrillée, il suffit de prendre dix captures à l’aide du bouton « espace » dans plusieurs angles pour créer un fichier binaire contenant les informations de calibration de la caméra. Après avoir pris les dix captures, l’application nous demande de donner un nom au fichier.</p>
+                            <img src="../img/calibSetName.jpg" alt="Calibration Set Name" />
+                            <p>Pour finir, il ne reste qu’à placer le fichier de calibration dans le projet Unity où se trouve le fichier de calibration par défaut. Il est important de changer le format du fichier, qui est « .dat » en « .bytes », car ArToolKit li le fichier dans ce format.</p>
 						</div>
                     </div>
                 </div>
