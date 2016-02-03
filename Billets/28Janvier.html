@@ -65,6 +65,21 @@
                             <p>Dans cette image, la balance des blancs est dans le minimum. Cela créer un effet de blanchissement et on peut comprendre que si la totalité de la capture est un peu plus blanc que ce qu’elle devrait être, la détection du marqueur sera plus ardu. Si vous avez de la difficulté à remarque le blanchissement de l’image, voici la même image avec un ajustement de la balance des blancs qui rend les couleurs plus réel :</p>
                             <img src="../img/balanceNotSuperWhite.jpg" alt="Balance not white" width="50%" height="50%"/>
                             <p>Maintenant, les couleurs se distinguent mieux et nous avons plus de facilité à détecter le marqueur. En lien avec ce sujet, plus tard, nous verrons comment la détection de marqueur gère les fonds qui peuvent être trompeur, comme les quadriller.</p>
+							<h2>Déplacement de la balle</h2>
+							<p>Vincent a recherché un moyen de faire déplacer la balle à l’intérieur du labyrinthe. Nous en somme arrivé à la conclusion que la meilleure façon serait d’utiliser l’engin physique d’unity.
+							Pour ce faire, nous pouvons utiliser 3 méthodes :</p>
+							<ol>
+								<li>Pivotement de la planche de jeu :
+La première option que nous avons envisagée était de faire pivoter la planche de jeu afin que la balle puisse glisser le long de la pente créée. La difficulté de cette méthode réside dans le fait qu’ArToolKit fonctionne différemment. En fait, quand la caméra détecte un mouvement de rotation de la part du marqueur, comme il se peut que se soit la webcam ou le marqueur qui pivote, il fait pivoter la caméra unity afin de simuler une orientation au model. Cela fait en sorte que le model unity ne pivote jamais. Alors il aurait fallu que l’on puisse extraire la matrice de rotation de la caméra et l’applique au model, tout en s’assurant que la caméra reste fixe en haut.
+</li>
+								<li>Appliquer une force à la balle :
+La deuxième option envisagée était d’appliquer une force à la balle. Cette force serait proportionnelle à la position de la caméra sur un plan 2D, inverse a la balle. De cette façon, plus la caméra n’est inclinée, une plus grande force est appliquée à la balle.
+
+</li>
+								<li>Modifier la force gravitationnelle :
+La dernière méthode, celle que nous avons utilisée, repose sur la force gravitationnelle de l’engin Unity. En théorie, la webcam sera toujours pointé vers le bas, en se basant sur ce fait, nous pouvons en déduire que la caméra pointera toujours vers le bas. Sur ce, nous pouvons extraire le vecteur de position de la caméra virtuelle d’unity et y trouver son orientation. Par la suite, nous changeons la force gravitationnelle avec l’orientation de la caméra. Ce qui en résulte est une illusion que la planche de jeu pivote, la balle est attirée vers le « Bas », donc l’orientation de la caméra.</li>
+							</ol>
+							<img src="../img/planIncline.png" alt="Plan Incliné" width="50%" height="50%"/>
 						</div>
                     </div>
                 </div>
