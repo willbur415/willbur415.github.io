@@ -73,6 +73,20 @@
                             <img src="../img/calibSetName.jpg" alt="Calibration Set Name" />
                             <p>Pour finir, il ne reste qu’à placer le fichier de calibration dans le projet Unity où se trouve le fichier de calibration par défaut. Il est important de changer le format du fichier, qui est « .dat » en « .bytes », car ArToolKit li le fichier dans ce format. Il faut aussi spécifier le nom du fichier dans l'éditeur Unity.</p>
                             <img src="../img/Camera_parameters.jpg" alt="Camera parameters" width="50%" height="50%" />
+							<h2>Principe de détection de la caméra</h2>
+							<p>Afin de pouvoir mieux comprendre comment l’application fonctionne, Vincent a recherché sur l’algorithme de détection d’ARToolKit. 
+La première étape de détection des marqueurs commence par une capture d’écran à partir de la caméra.
+</p>
+							 <img src="../img/normalMarker.jpg" alt="normalMarker" width="50%" height="50%" />
+							 <p>À partir de cette image, le programme fera une image binaire en noir et blanc </p>
+							 <img src="../img/normalMarker2.jpg" alt="normalMarker2" width="50%" height="50%" />
+							 <p>Ensuite, les couleurs de l’image seront inversés afin de pouvoir détecter le coté noir du marqueur et ensuite à l’aide du fichier binaire, trouver le contour du carré noir.</p>
+							 <img src="../img/normalMarker3.jpg" alt="normalMarker3" width="50%" height="50%" />
+							 <p>Ce contour est identifié, puis le programme compare le milieu du marqueur avec ses marqueurs préenregistrés. S’il trouve une correspondance, il confirme le marqueur.</p>
+							 <img src="../img/normalMarker4.jpg" alt="normalMarker4" width="50%" height="50%" />
+							 <p>Finalement, il dessine le model associé au model en modifiant l’orientation de la caméra en fonction de la position du marqueur.</p>
+							 <img src="../img/normalMarker5.jpg" alt="normalMarker5" width="50%" height="50%" />
+
 						</div>
                     </div>
                 </div>
