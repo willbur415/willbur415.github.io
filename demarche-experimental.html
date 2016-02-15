@@ -96,6 +96,17 @@
                        			</ul>
                        		</li>
                        	</ul>
+                       	<h2>Suivi des activités de recherche</h2>
+                       	<h3>Recherche documentaire</h3>
+                       	<p>Avant de commencer notre expérimentation, nous avons fait une recherche documentaire sur la réalité augmentée. Par exemple, nous avons commencé à faire de la recherche sur les marqueurs, l’éclairage ambiant et les matériaux de marqueurs.</p>
+                       	<h3>Création du projet Unity 3D</h3>
+                       	<p>Nous avons commencé par créer un projet sur Unity3D. Dans la scène qui vient de se générer, on doit importer “ArToolKit Uniy Package”. Maintenant que nous avons tous ce qu’il nous faut pour créer une scène de réalité augmentée, nous pouvons placer les composantes.</p>
+                       	<p>Pour placé les composantes aux bons endroits, veuillez suivre se tutoriel :</p>
+                       	<a href="http://artoolkit.org/documentation/doku.php?id=6_Unity:unity_getting_started">http://artoolkit.org/documentation/doku.php?id=6_Unity:unity_getting_started</a>
+                       	<p>Une fois les composantes de la scène aux bons endroits, nous pouvons ajouté l’objet 3D que nous désirons dans le “Marker Scene”. Il faut bien faire attention que le “Layer” de tous les objets que nous voulons faire affiché soit le même que le “Culling Mask” de notre caméra sinon ceux-ci ne s'afficheront pas. Si vous désirez faire avoir plusieurs marqueurs qui affichent des formes différentes, il suffit d’ajouté autant de “ArMarker” dans le “ArController” et de composants “ArTrackedObject” qu’il a de marqueurs différents dans la scène.</p>
+                       	<h3>La calibration de caméra</h3>
+                       	<p>En tout premier lieu, il faut imprimer sur papier une image de calibration. Cette image quadriller se trouve dans ”doc/patterns/Calibration chessboard (A4).pdf” à partir du fichier d’outils d’ArToolKit.</p>
+                       	<img src="img/ChessBoard.jpg" width="50%" height="50%" alt='ChessBoard Marker' />
                       </div>
                     </div>
                 </div>
