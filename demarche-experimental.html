@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Projet de recherche - Réalité augmentée</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="index.html">
+                        Is This Real Life ?
+                    </a>
+                </li>
+                <li>
+                    <a href="proposition-de-recherche.html">Proposition de recherche</a>
+                    <a href="demarche-experimental.html">Démarche d'expérimentation</a>
+                    <a href="devis-technique.html">Devis Technique</a>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <a href="Billets/25Janvier.html">25 Janvier</a>
+                    <a href="Billets/26Janvier.html">26 Janvier</a>
+                    <a href="Billets/28Janvier.html">28 Janvier</a>
+                    <a href="Billets/8Fevrier.html">8 Février</a>
+                    <a href="Billets/10Fevrier.html">10 Février</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                      <div style="width:80%;">
+                       	<h1>Démarche d'expérimentation</h1>
+                       	<h2>Document Nécessaires</h2>
+                       	<p>Ci-dessous la liste de tous les outils qui ont été nécessaire à la fabrication du prototype ainsi qu’une courte description de leur utilité.</p>
+                       	<ul>
+                       		<li>
+                       			Unity 5.2.2
+                       			<ul>
+                       				<li>
+                       					Engin Physique primordial à l’expérimentation. Ce logiciel sert à la conception des labyrinthes en modèle 3D, gérer l,environnement 3D du jeu, gérer la physique des modèles ainsi que le la capture vidéo.
+                       				</li>
+                       			</ul>
+                       		</li>
+                       		<li>
+                       			ArToolKit Unity Package
+                       			<ul>
+                       				<li>
+                       					Paquet Unity contenant tous les fichiers de base nécessaire à la confection d’un environnement d’AR. Le package comprends toutes les librairies utiles pour l’AR, des scènes exemples, des textures ainsi que des modèles.
+                       				</li>
+                       			</ul>
+                       		</li>
+                       		<li>
+                       			ArToolKit Additionnal Unity tools
+                       			<ul>
+                       				<li>
+                       					Une multitude d’outils divers qui ont pour but d’optimiser la création d’un jeu AR. On peut y retrouver un outil de calibration de la caméra, d’optimisation d’image et aussi de création de marqueurs.
+                       				</li>
+                       			</ul>
+                       		</li>
+                       		<li>
+                       			Visual Studio
+                       			<ul>
+                       				<li>
+                       					Logiciel de programmation servant à éditer des scripts d’Unity en C#. Il est utile pour coder les différents comportements des objets dans Unity.
+                       				</li>
+                       			</ul>
+                       		</li>
+                       	</ul>
+                       	<h2>Suivi des activités de recherche</h2>
+                       	<h3>Recherche documentaire</h3>
+                       	<p>Avant de commencer notre expérimentation, nous avons fait une recherche documentaire sur la réalité augmentée. Par exemple, nous avons commencé à faire de la recherche sur les marqueurs, l’éclairage ambiant et les matériaux de marqueurs.</p>
+                       	<h3>Création du projet Unity 3D</h3>
+                       	<p>Nous avons commencé par créer un projet sur Unity3D. Dans la scène qui vient de se générer, on doit importer “ArToolKit Uniy Package”. Maintenant que nous avons tous ce qu’il nous faut pour créer une scène de réalité augmentée, nous pouvons placer les composantes.</p>
+                       	<p>Pour placé les composantes aux bons endroits, veuillez suivre se tutoriel :</p>
+                       	<a href="http://artoolkit.org/documentation/doku.php?id=6_Unity:unity_getting_started">http://artoolkit.org/documentation/doku.php?id=6_Unity:unity_getting_started</a>
+                       	<p>Une fois les composantes de la scène aux bons endroits, nous pouvons ajouté l’objet 3D que nous désirons dans le “Marker Scene”. Il faut bien faire attention que le “Layer” de tous les objets que nous voulons faire affiché soit le même que le “Culling Mask” de notre caméra sinon ceux-ci ne s'afficheront pas. Si vous désirez faire avoir plusieurs marqueurs qui affichent des formes différentes, il suffit d’ajouté autant de “ArMarker” dans le “ArController” et de composants “ArTrackedObject” qu’il a de marqueurs différents dans la scène.</p>
+                       	<h3>La calibration de caméra</h3>
+                       	<p>En tout premier lieu, il faut imprimer sur papier une image de calibration. Cette image quadriller se trouve dans ”doc/patterns/Calibration chessboard (A4).pdf” à partir du fichier d’outils d’ArToolKit.</p>
+                       	<img src="img/ChessBoard.jpg" width="50%" height="50%" alt='ChessBoard Marker' />
+                       	<p>Pour commencer la calibration, il faut exécuter un des outils qui s'appelle “calib_camera.exe”. Il est fortement suggérer de démarrer cet outil en ligne de commande avec les paramètres suivants : <code>calib_camera.exe -vconf “-flipV -devNum=X</code>. -flipV inversera la caméra à la vertical, car celle-ci est inversé de base et -devNum=X ce charge de décidé qu’elle caméra sera utilisé dans la calibration (X étant le numéro de la caméra). Si votre ordinateur possède seulement une caméra, ce paramètre est peut-être inutile. Quand l’outil se lance, vous aurez alors une fenêtre avec le flux de votre caméra. Maintenant vous pouvez prendre votre caméra et prendre des photos de la feuille quadrillée imprimé plus tôt sous différents angles (appuyer sur espace pour prendreune capture).</p>
+                       	<p>L’outil essayera de détecter et d’identifier les 35 coins qui se touchent sur la feuille quadrillée. Si tous les coins se trouvent sur le flux de caméra, tout le texte à l’écran deviendra rouge et vous pourrez alors prendre votre première capture.</p>
+                       	<img src="img/Calib_ready.jpg" width="75%" height="75%" alt='Cabibration ready' />
+                       	<p>Si un ou plusieurs des coins ne sont pas détecté par la caméra, tout le texte à l’écran deviendra vert.</p>
+                       	<img src="img/CalibNotReady.jpg" width="75%" height="75%" alt='Cabibration not ready' />
+                       	<p>Après avoir pris 10 captures, l’outil vous demandera de choisir le nom du fichier de calibration. Ensuite il suffit de placer le fichier de calibration dans le projet Unity3D ou se trouve le fichier de calibration par défaut (“Assets\ARToolKit5-Unity\Resources\ardata”). Il est important de changer le format du fichier en « .bytes », car votre projet Unity3D li le fichier de calibration dans ce format. Pour finir, il suffit de spécifier le nom du fichier dans l’éditeur d’Unity.</p>
+                       	<img src="img/Camera_parameters.jpg" width="75%" height="75%" alt='Camera parameters' />
+                       	<h3>Les marqueurs</h3>
+                       	<p>Maintenant que la scène est prête et que la caméra est calibrée, il faut créer des marqueurs physiques. Il est possible d’utiliser les marqueurs par défaut d’ArToolKit (Hiro, par exemple), mais si votre projet demande plusieurs marqueurs différents, il est possible d’en créer avec un outil de « ArToolKit Additionnal Unity Tool ».</p>
+                       	<p>ArToolKit fournit un gabarit de marqueur (une image de carré noir) dans le fichier  « /doc/patterns » à partir du fichier de « ArToolKit Additionnal Unity Tool ». Il suffit d’ajouté une forme à l’intérieur, comme dans cet exemple-ci : </p>
+                       	<img src="img/FirstLevel.png" alt='First Level Marker' />
+                       	<p>Il est important de noter que les formes avec beaucoup de coins visibles sont à priorisé. Il faut également faire attention que notre forme ne puisse pas être identiques dans plusieurs sens; si on tourne le marqueur, il faut qu’ArToolKit puisse détecter le sens du marqueur pour bien afficher les objets. Nous pouvons maintenant imprimer notre marqueur sur une feuille de papier.</p>
+                       	<p>Pour être capable de reconnaitre le marqueur physique que nous venons de créer, il faut créer sa copie binaire. Pour se faire, il faut utiliser un autre outil de « ArToolKit Additionnal Unity Tool »; il se nomme mk_patt.exe. Au lancement de l’outil, un flux vidéo s’affichera à l’écran. Il suffit d’y placer le marqueur. Si le marqueur est détecté, un indicateur montera le marqueur en plan rapproché comme ceci :</p>
+                       	<img src="img/mk_patt.png" alt='mk_patt.exe' />
+                       	<p>Il suffit de cliquer sur le flux vidéo pour sélectionner ce que l’outil voit comme étant le marqueur. Ensuite, la console de l’outil demandera le nom du fichier binaire représentant le marqueur et le sauvegardera dans le fichier de l’outil. Il est important de changer le nom du fichier pour  « patt.nomFichier.txt ». C’est sous cette nomenclature qu’Unity détectera que ce fichier est un marqueur en binaire. Pour finir, il faut placer le fichier dans « /Assets\ARToolKit5-Unity\Resources\ardata\markers » à partir du projet Unity. Il est maintenant possible de sélectionner ce marqueur dans la liste déroulante de marqueur dans la composante « ArMarker ».</p>
+                       	<h3>Le jeu</h3>
+                       	<p>Maintenant que nous avons tous ce qu’il nous faut pour faire une scène de réalité augmentée, il ne reste qu’à laisser place à l’imagination. Tant que le ou les objets sont dans le « Marker Scene » et qu’ils ont le masque du « Culling mask » de votre caméra virtuelle, ils s’afficheront.</p>
+                       	<p>Pour ce qui est de notre prototype, si vous souhaitez faire quelque chose de similaire, il suffit de créer un labyrinthe qui ressemble à ceci :</p>
+                       	<img src="img/Level.png" alt='A Level'/>
+                       	<p>Pour la suite, vous remarquerez que les objets ne bougent pas dans la scène quand on incline le marqueur. En effet, c’est la caméra virtuelle qui effectue une rotation autour du centre du marqueur. C’est avec cette caméra qu’on réussit à faire bouger la balle car le labyrinthe ne s’incline pas, comme expliqué plus haut; donc la balle ne subit aucun effet de la gravité.</p>
+                       	<h3>Déplacement de la balle</h3>
+                       	<p>Nous avons découvert que la caméra pointe toujours dans la direction d’inclinaison de la balle. De plus, la balle a besoin d’aller dans la direction de l’inclinaison si l’on veut qu’elle donne l’effet de subir les effets de la gravité. Heureusement, Unity3D possède en mémoire un vecteur (Vector3D) nommée “gravity” dans sa classe “Physics”. Ce vecteur émet une force sur les objets sensibles à la gravité (dans ce cas, seulement la balle). Par défaut, le vecteur pointe vers le bas en ligne droite; par contre, si on change l’angle du vecteur de gravité pour l’angle de direction de la caméra, nous sommes en mesure de faire déplacer la balle dans la direction désirée. Voici le script qu’il faut attacher à la caméra pour que la balle se déplace :</p>
+                       	<code>Physics.gravity = transform.forward;</code>
+                       	<p>Et voilà ! Si on démarre la solution, nous pouvons incliner le marqueur devant la caméra et la balle se déplacera dans le labyrinthe. À partir de maintenant nous pouvons ajouter des trous ou une destination pour gagner le niveau (comme dans notre prototype). En fait, les possibilités sont presque infinies en ce qui concerne ce qu’on peut ajouter au prototype. Notre but étant atteint, nous en sommes restés là.</p>
+                        <h3>Pertinence et utilité de l'outil de recherche</h3>
+                        <p>Afin de prouver que la réalité augmentée a un avenir potable dans le domaine du jeu vidéo, nous avons décidé de créer un petit projet expérimental afin de démontrer certaines utilités de cette nouvelle technologie. Ce projet a pour but de prouver que la réalité augmentée peut très bien s’adapter à l'industrie du jeu vidéo en y incorporant de nouvelles mécaniques de jeu qui n’avaient pas encore été approchée auparavant. Le but de la réalité augmentée est de combiner le fantastique et l’imaginaire du monde virtuel au concret et le physique du monde réel.</p>
+                        <h3>Comment est-ce que l’outil règle la problématique</h3>
+                        <p>Au final, notre prototype nous offre une expérience de jeu vidéo assez unique dans son genre. Le fait de tenir physiquement quelque chose dans ses mains et de l’incliner afin de faire bouger la planche de jeu sur l’écran apporte un niveau de réalisme et d’immersion encore plus grand qu’un contrôleur conventionnel. Le jeu est très amusant, tout en restant simple, il offre un monde de possibilités aux développeurs car on peut faire apparaître ce que l’on veut sur la planche de jeu. Finalement, le prototype confirme que la réalité augmentée a un avenir certain dans monde des jeux vidéo, sa capacité à combiner les éléments virtuels et réels afin de donner une expérience très immersive au joueur. Il est clair qu’une nouvelle génération de jeux sur tablette/téléphone intelligent se serviront de cette technologie afin de créer de nouveaux jeux extraordinaire. Que ce soit par le biais d’image contenant des marqueurs ou bien tout simplement de détecter des surfaces planes, il est certain que la réalité augmentée offre un grand nombre de possibilités pour les nouveaux développeurs.</p>
+                        <h3>Contraintes et difficultés rencontré pendant le développement</h3>
+                        <h4>Installation des programmes</h4>
+                        <p>Lors du commencement du projet, nous avons eu de la difficulté à installer les bonnes versions des logiciels. Comme il existe plusieurs versions d’Unity, il existe aussi différentes versions d’ArToolkit. Il a fallu trouver quelle versions correspondait le mieux à notre projet et fonctionnaient correctement. En effet, sur certaines versions d’ArToolkit, la caméra intégrée n’était pas détectée. En suivant la documentation sur le site web, nous avons pu régler le problème en installant les versions qui étaient compatibles.</p>
+                        <h4>Matérielles</h4>
+                        <p>Au début du projet, nous utilisions les caméras intégrées qui se trouvent dans nos ordinateurs portables. Cela répondait bien aux demandes de notre projet mais nous nous sommes vite aperçus que nous ne pouvions pas continuer de la sorte. En effet, notre projet requiert que la caméra soit fixe, au-dessus du marqueur en pointant vers le bas. Nous avons donc eu besoin de se procurer une webcam afin de résoudre notre problème.</p>
+                        <h4>Comprendre la technologie</h4>
+                        <p>Quand nous avons ouvert les projets de test pour la première fois, nous avons commencé à expérimenter avec des modèles 3D. En faisant des recherches et en  lisant la documentation, nous avons pu acquérir certaines connaissances de la technologie qui nous a beaucoup servie lors de notre projet. Cependant, un des objectifs de notre projet était de faire bouger une bille dans un environnement 3D. Le problème était que nous ne savions pas l’effet que la rotation d’un marqueur avait sur le modèle 3D dans l’engin physique Unity. En effet, si le fait de pivoter le marqueur pivotait aussi le modèle, il aurait fallu adapter notre projet. Afin de répondre à notre question, nous avons expérimenté avec un modèle éclairé d’un certain angle ainsi que d’analyser les modèles à l’intérieur du jeu en mode Debug. Nous nous sommes aperçus que faire pivoter le marqueur a le même effet que de pivoter la caméra, aussi que seule la caméra dans Unity bouge autour du modèle.</p>
+                        <h4>Calibration des équipements</h4>
+                        <p>Lorsque nous avons commencé avec la détection des marqueurs, nous nous sommes vite aperçu que la détection de ces derniers laissait à désirer. Il y avait beaucoup de tremblement dans l’image, des changements de rotation et des pertes de détection fréquentes. En effet, ArToolkit utilise des réglages de base pour ce qui est de la caméra, ce qui fait que la capture de l’image n’est pas optimale pour la détection du marqueur. En effet, une bonne calibration fut nécessaire afin d’avoir un niveau de détection adéquat et constant. À l’aide d’outils fournis sur le site d’ArToolkit, nous avons pu calibrer la caméra à l’aide de tests afin d’optimiser la détection des marqueurs. Au final, le résultat est incroyable, la qualité de détection et de taquage du marqueur fut augmentée considérablement</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>
