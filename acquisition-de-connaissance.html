@@ -89,6 +89,16 @@
                         <p>La façon la plus facile et efficace de créer une source de lumière omnidirectionnelle est de pointer une lampe vers le haut, et ensuite de faire refléter la lumière de cette lampe sur une feuille blanche opaque qui se trouve au-dessus du marqueur. Se faisant, la lumière reflète créer une bonne source de lumière omnidirectionnelle.
 						Si la capture de réalité augmentée se trouve dans une pièce aux murs blancs, il est possible de pointer la lumière dans un des coins supérieurs pour créer un effet similaire.</p>
                         <p>L’important à retenir dans le fonctionnement de l’éclaire omnidirectionnelle, c’est qu’il ne faut pas que la lumière soit en contacte directe avec l’objet. C’est un peu ironique car nous utilisons un reflet pour en éviter un.</p>
+                        <h3>5. La superposition d'image à l'écran</h3>
+                        <p>Pour afficher le modèle 3D à l’écran, le programme effectuera une quantité de calculs pour déterminer la position, la grandeur ainsi que la rotation du modèle qu’il doit afficher. Grâce à la détection du marqueur, le programme sait où il doit placer le modèle, par contre, quelle devra être la dimension de celle-ci? Afin de créer un effet de profondeur, le programme fera grossir ou diminuer le modèle afin qu’il donne l’illusion de profondeur. Plus le marqueur est proche, plus le modèle devrait être grand à l’écran.</p>
+                        <p>Pour ce faire, nous avons préenregistré les dimensions des marqueurs afin que le programme soit en mesure de donner la bonne dimension au modèle à l’écran.
+En effet, il s’agit d’une simple équation mathématique pour trouver la taille du modèle:</p>
+                        <code>M/Mo = Xc / Xe</code>
+                        <p>Soit M: le grossissement du modèle 3D à appliquer sur l’image.</p>
+                        <p>Mo: la dimension du modèle 3D originale</p>
+                        <p>Xc: La longueur du marqueur qui a été capté par la caméra.</p>
+                        <p>Xe: La longueur enregistrée du marqueur dans le programme.</p>
+                        <p>Grâce à cela, l’illusion de profondeur est garantie et le déplacement du modèle à l’écran est encore plus fluide. </p>
                       </div>
                     </div>
                 </div>
