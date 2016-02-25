@@ -67,22 +67,28 @@
                     <div class="col-lg-12">
                       <div style="width:80%;">
                         <h1>Acquisition de connaissance</h1>
-                        <h2>ARToolKit</h2>
+                        <h2>1. ARToolKit</h2>
                         <p>ARToolKit est un outil de développement qui permet au programmeur de développer des applications de réalité augmentée. C’est un outil de développement “Open Source” qui a été téléchargé plus d’un million de fois.</p>
                         <p>ARToolKit facilite la création d’applications multimédia en offrant la possibilité au programmeur de faire de la réalité augmentée, et ce, relativement facilement. Dans notre contexte d’apprentissage, ARToolKit a pu nous servir en nous donnant la possibilité de créer un jeu simple qui montre la force de la réalité augmentée. En effet, ARToolKit possède une version en paquet Unity, ce qui permet d’utiliser les fonctionnalités d’ARToolKit dans l’engin de jeu.</p>
                         <p>Dans ce paquet, on y trouve toutes les composantes pour créer une scène de réalité augmentée. De plus, des scènes d’exemples, avec différentes sortes de marqueurs est disponible pour faciliter la compréhension d’ARToolKit.</p>
                         <img src="img/scene-exemple.jpg" />
-                        <h2>La détection de marqueur</h2>
+                        <h2>2. La détection de marqueur</h2>
                         <p>La détection de marqueur est très importante en réalité augmentée. En effet, c’est ce qui nous permet de détecter où il faut afficher les objets que nous voulons montrer sur le flux vidéo. </p>
                         <p>Avant de se concentrer sur la détection de marqueur, voici une courte description d’un marqueur : un marqueur est un objet réel, de préférence plat, qui possède un dessin ou une forme facilement reconnaissable. En voici un exemple, utilisé dans notre projet : </p>
                         <img src="img/FirstLevel.png" />
                         <p>Comme on peut voir sur le marqueur ci-dessus, et c’est comme cela pour tous les marqueurs avec ARToolKit, le marqueur (1) est entouré d’un carré noir. Ce carré représente la limite pour la détection de marqueur. Il est nécessaire, car il dicte à ARToolKit qu’un marqueur se situe à l’intérieur de celui-ci. Un marqueur doit être noir et blanc et doit avoir un carré noir avec le une épaisseur d’un quart de la longueur d’un côté.</p>
                         <img src="img/MarkerSize.jpg" />
-                        <h3>La calibration de caméra</h3>
+                        <h3>3. La calibration de caméra</h3>
                         <p>Certains pourraient sous-estimer l’importance de la calibration de la caméra. En effet, elle est impérative si l’on veut que la détection des marqueurs fonctionne vraiment bien. Calibrer une caméra pour la réalité augmentée assure la fluidité quand on bouge le marqueur dans une scène de réalité augmentée.</p>
                         <p>Pour calibrer une caméra pour ARToolKit, il faut utiliser un des nombreux outils qu’ARToolKit nous propose avec le paquet Unity. L’outil, nommé calib_camera.exe, s’utilise en plaçant la caméra sous plusieurs angles devant une feuille quadrillé (toujours fourni par ARToolKit).</p>
                         <img src="img/Calib_ready.jpg" />
                         <p>Quand nous avons les 35 petits “x” sur les coins des carrés, cela veut dire que l’on peut prendre une “capture”. Après avoir pris plusieurs “captures”, un de configuration spécialisée pour la caméra se génère.</p>
+                        <h3>4. La luminosité</h3>
+                        <p>Nous avons appris que la luminosité joue un rôle très important dans le fonctionnement dans la réalité augmentée. En effet, il est très important de ne pas avoir de reflet sur le marqueur. Pendant une scène de réalité augmentée, la caméra détecte le noir sur le marqueur, mais les reflets font en sorte que ce qui devrait être noir devient plus ou moins blanc, donc la caméra ne les détecte pas.</p>
+                        <p>Pour avoir une bonne luminosité, et une bonne détection de marqueur par la même occasion, il faut avoir une bonne source de lumière omnidirectionnelle. Nous avons découvert qu’il faut faire attention à ce qu’aucune source de lumière ne pointe directement sur le marqueur.</p>
+                        <p>La façon la plus facile et efficace de créer une source de lumière omnidirectionnelle est de pointer une lampe vers le haut, et ensuite de faire refléter la lumière de cette lampe sur une feuille blanche opaque qui se trouve au-dessus du marqueur. Se faisant, la lumière reflète créer une bonne source de lumière omnidirectionnelle.
+						Si la capture de réalité augmentée se trouve dans une pièce aux murs blancs, il est possible de pointer la lumière dans un des coins supérieurs pour créer un effet similaire.</p>
+                        <p>L’important à retenir dans le fonctionnement de l’éclaire omnidirectionnelle, c’est qu’il ne faut pas que la lumière soit en contacte directe avec l’objet. C’est un peu ironique car nous utilisons un reflet pour en éviter un.</p>
                       </div>
                     </div>
                 </div>
